@@ -1,0 +1,219 @@
+.logo-outer {
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    height: 1px;
+    width: 120px;
+    background: $primary-color;
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
+  &:before {
+    left: -135px;
+  }
+  &:after {
+    right: -135px;
+  }
+  @media (max-width: 991px) {
+    position: absolute;
+    top: 9px;
+    padding: 0;
+    text-align: left;
+  }
+  @media (max-width: 420px) {
+    top: 12px;
+  }
+}
+.logo-inner {
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    height: 1px;
+    width: 80px;
+    background: $primary-color;
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
+  &:before {
+    left: -96px;
+  }
+  &:after {
+    right: -96px;
+  }
+  img {
+    @media (max-width: 1199px) and (min-width: 992px) {
+      width: 38%;
+    }
+    @media (max-width: 575px) {
+      width: 80%;
+    }
+  }
+}
+
+.header-area {
+  position: relative;
+  background-color: $white;
+  width: 100%;
+  z-index: 999999;
+  @include transition();
+  @media (max-width: 991px) {
+    position: absolute;
+    box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+  }
+  .navbar {
+    padding: 0;
+    @media (max-width: 991px) {
+      padding: 20px 0;
+      max-width: 100px;
+      margin-left: auto;
+    }
+    .dropdown-item {
+      width: auto !important;
+      text-align: left;
+      font-size: 14px;
+      @media (max-width: 991px) {
+        text-align: right;
+        padding: 0.25rem;
+      }
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.header-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+
+@media (min-width: 992px) {
+  .dropdown .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.menu-left {
+  text-align: right;
+  a {
+    margin-right: 26px;
+    color: $black;
+    font-size: 14px;
+    font-family: $title-font;
+    font-weight: 700;
+    font-style: italic;
+    @media (max-width: 1199px) {
+      margin-right: 16px;
+    }
+    @media (max-width: 991px) {
+      margin-right: 7px;
+    }
+    &:hover,
+    &.active {
+      color: $primary-color;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.menu-right {
+  .nav-item {
+    .nav-link {
+      margin: 0px 20px;
+      color: $black;
+      font-size: 14px;
+      font-family: $title-font;
+      font-weight: 700;
+      font-style: italic;
+      padding: 38px 0px;
+      &:hover,
+      &.active {
+        color: $primary-color;
+      }
+      @media (max-width: 1199px) {
+        margin: 0px 9px;
+      }
+      @media (max-width: 991px) {
+        padding: 10px 0;
+        margin-right: 7px;
+        letter-spacing: normal;
+      }
+    }
+    .dropdown-menu {
+      border-radius: 0;
+      margin-top: 0px;
+      border: none;
+      @media (max-width: 991px) {
+        margin-top: 0px;
+      }
+      a {
+        display: block;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+        font-style: italic;
+      }
+    }
+  }
+  @media (max-width: 1280px) and (min-width: 799px) {
+    font-size: 11px;
+  }
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
+  @media (max-width: 991px) {
+    text-align: right;
+  }
+  .hide-lg {
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+}
+
+.default-header {
+  background-color: #fff;
+  padding: 20px 0;
+  width: 100% !important;
+  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+
+.sticky-wrapper {
+  height: 48px !important;
+}

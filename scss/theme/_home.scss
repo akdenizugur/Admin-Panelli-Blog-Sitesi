@@ -1,0 +1,398 @@
+/* Start Home Banner Area 
+============================================================================================ */
+
+.home-banner-area {
+  position: relative;
+  @media (max-width: 991px) {
+    padding: 72px 0px 0px;
+  }
+  .container-fluid {
+    padding-left: 28%;
+    position: relative;
+    @media (max-width: 992px) {
+      max-width: 960px;
+      padding-left: 15px;
+    }
+    @media (max-width: 768px) {
+      max-width: 720px;
+    }
+    @media (max-width: 576px) {
+      max-width: 540px;
+      padding-left: 15px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      width: 73%;
+      height: 100%;
+      background: $primary-color;
+      box-shadow: 0px 10px 30px rgba(153, 153, 153, 0.3);
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+    }
+  }
+  .owl-carousel {
+    .owl-nav {
+      position: absolute;
+      right: 22%;
+      bottom: 8%;
+      @media (max-width: 1300px) {
+        display: none;
+      }
+      @media (max-width: 1665px) {
+        right: 18%;
+      }
+      img {
+        @include filter(brightness(0%));
+        opacity: .5;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .owl-prev {
+        margin-right: 90px;
+        @media (min-width: 2250px) {
+          margin-right: 120px;
+        }
+      }
+    }
+    .owl-dots {
+      counter-reset: dots;
+      position: absolute;
+      right: 25%;
+      bottom: 8%;
+      color: $title-color;
+      font-weight: 700;
+      @media (max-width: 1300px) {
+        display: none;
+      }
+      @media (max-width: 1665px) {
+        right: 22%;
+      }
+    }
+    .owl-dot {
+      margin-right: 8px;
+      opacity: 0.5;
+      @include transition();
+      &:before {
+        counter-increment: dots;
+        content: counter(dots);
+      }
+      &.active, &:hover {
+        opacity: 1;
+      }
+    }
+    .owl-stage {
+      left: -140px;
+      @media (max-width: 1300px) {
+        left: 0px;
+      }
+    }
+    // .owl-item img {
+    //   width: auto !important;
+    // }
+  }
+  .text-wrapper {
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    max-width: 700px;
+    padding: 40px 0px;
+    @media (max-width: 1300px) {
+      margin-left: 0px;
+    }
+    @media (max-width: 991px) {
+      padding: 40px 20px;
+    }
+    h1 {
+      color: #ffffff;
+      font-size: 36px;
+      @media (max-width: 1199px) {
+        font-size: 30px;
+      }
+      br {
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .social-icons {
+    position: absolute;
+    top: 56%;
+    left: 17%;
+    margin-top: -20px;
+    @include transform(rotate(-90deg));
+    @media (max-width: 1680px) {
+      left: 180px;
+    }
+    @media (max-width: 1250px) {
+      left: 90px;
+    }
+    @media (max-width: 1199px) {
+      display: none;
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
+    ul {
+      position: relative;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        width: 80px;
+        height: 1px;
+        background: #828bb2;
+        @media (max-width: 767px) {
+          width: 0px;
+        }
+      }
+      &:before {
+        right: -90px;
+      }
+      &:after {
+        left: -90px;
+      }
+      li {
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: inline;
+        margin-right: 7px;
+        @media (max-width: 767px) {
+          font-size: 12px;
+          margin: 0 1px;
+        }
+        a {
+          i {
+            color: #ffffff;
+            background: #424161;
+            display: inline-block;
+            padding: 9px;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 12px;
+            font-size: 14px;
+            border-radius: 50%;
+            @include transform(rotate(90deg));
+            @include transition(all 0.3s ease-in-out);
+            &:hover {
+              color: $primary-color;
+              background: #ffffff;
+            }
+          }
+        }
+      }
+      .diffrent {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+/* End Home Banner Area 
+============================================================================================ */
+
+/* Start Banner Area 
+============================================================================================ */
+
+.banner-area {
+  min-height: 400px;
+  background: url(../img/banner/banner-bg.jpg) no-repeat;
+  background-size: cover;
+  .overlay-bg {
+    background: rgba(1, 1, 13, 0.6);
+  }
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+  width: 70%;
+  color: #fff;
+  @media (max-width: 991px) {
+    margin-top: 30px;
+  }
+  h1 {
+    color: $white;
+    font-size: 48px;
+    text-transform: capitalize;
+    @media (max-width: 414px) {
+      font-size: 30px;
+    }
+  }
+  .breadcrmb {
+    a {
+      color: #ffffff;
+      @media (max-width: 991px) {
+        color: $text-color;
+      }
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    span {
+      color: #ffffff;
+      font-weight: 600;
+      margin: 0 10px;
+      @media (max-width: 991px) {
+        color: $text-color;
+      }
+    }
+  }
+  p {
+    font-size: 15px;
+    text-transform: capitalize;
+    padding-top: 25px;
+    margin: 0;
+  }
+}
+
+/* End Banner Area 
+============================================================================================ */
+
+/* Start Amenities Area css
+============================================================================================ */
+
+.single-amenities {
+  background: $offwhite;
+  @include transition();
+  margin-bottom: 60px;
+  .amenities-thumb {
+    position: relative;
+    overflow: hidden;
+    &:before {
+      position: absolute;
+      content: "";
+      background: rgba(255, 255, 255, 0.4);
+      z-index: 999;
+      left: 110%;
+      top: 0;
+      height: 100%;
+      width: 130%;
+      @include transition(0.5s);
+    }
+  }
+  .amenities-details {
+    padding: 40px;
+    @media (max-width: 575px) {
+      padding: 40px 20px;
+    }
+    .amenities-meta {
+      margin-top: 15px;
+      a {
+        color: $text-color;
+        font-size: 13px;
+      }
+      span {
+        padding-right: 10px;
+      }
+    }
+    h5 {
+      font-size: 18px;
+      font-family: $title-font;
+      margin: 0px 0px 20px;
+      a {
+        color: $title-color;
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+    p {
+      margin-bottom: 0px;
+    }
+    .category {
+      a {
+        color: $text-color;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: 0px 20px 30px rgba(0, 35, 71, 0.1);
+    background: #ffffff;
+    .amenities-thumb {
+      &:before {
+        left: -130%;
+      }
+    }
+    h5 {
+      a {
+        color: $primary-color;
+      }
+    }
+  }
+}
+/* End Amenities Area css
+============================================================================================ */
+
+/* Start Contact Area css
+============================================================================================ */
+.contact-page-area {
+  .map-wrap {
+    width: 100%;
+    height: 430px;
+    margin-bottom: 80px;
+    @media (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+  }
+  .form-area {
+    .form-control {
+      &:focus {
+        box-shadow: none !important;
+        border-color: #ced4da !important;
+      }
+    }
+    input {
+      padding: 15px;
+      height: 40px;
+      line-height: 40px;
+    }
+    input,
+    textarea {
+      border-radius: 0;
+      font-size: 13px !important;
+      background: #f2f3f7;
+      border: 1px solid transparent;
+    }
+    textarea {
+      height: 160px;
+      margin-top: 0px;
+      padding: 15px;
+    }
+    .form-group {
+      @media (max-width: 992px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .address-wrap {
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+    .single-contact-address {
+      margin-bottom: 8px;
+      h5 {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .lnr {
+        font-size: 20px;
+        font-weight: 500;
+        color: $primary-color;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+/* ENd Contact Area css
+============================================================================================ */

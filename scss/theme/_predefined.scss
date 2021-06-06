@@ -1,0 +1,94 @@
+.section-gap {
+  padding: 130px 0;
+  @media (max-width: 991px) {
+    padding: 80px 0;
+  }
+}
+
+.section-gap-top {
+  padding-top: 130px;
+  @media (max-width: 991px) {
+    padding-top: 80px;
+  }
+}
+
+.section-title {
+  padding-bottom: 80px;
+  @media (max-width: 991px) {
+    padding-bottom: 30px;
+  }
+  h1 {
+    margin-bottom: 15px;
+    font-size: 36px;
+    text-transform: capitalize;
+    @media (max-width: 991px) {
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+    @media (max-width: 575px) {
+      font-size: 25px;
+    }
+  }
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.primary-btn {
+  display: inline-block;
+  background: $title-color;
+  padding: 0px 38px;
+  color: #fff;
+  font-family: $primary-font;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 50px;
+  border-radius: 0px;
+  border: 0;
+  outline: none !important;
+  text-align: center;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    color: #fff;
+    box-shadow: 0px 10px 30px rgba(187, 146, 54, 0.3);
+  }
+}
+.blog-post-btn {
+  display: inline-block;
+  background: transparent;
+  color: #13113a;
+  font-family: $primary-font;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 0px;
+  border: 0;
+  outline: none !important;
+  cursor: pointer;
+  @include transition();
+  span {
+    margin-left: 5px;
+    @include transition();
+  }
+  &:hover {
+    color: #13113a;
+    opacity: 0.9;
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+/* Start Overlay css
+============================================================================================ */
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* End Overlay css
+============================================================================================ */
